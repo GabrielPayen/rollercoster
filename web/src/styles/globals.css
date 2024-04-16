@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply p-4 rounded-lg shadow-md;
+}
+
+.icon {
+  @apply text-2xl;
+}
+
+.title {
+  @apply text-lg font-semibold mt-2;
+}
+
+.value {
+  @apply text-xl font-bold mt-1;
+}
+
+.upload-area {
+  @apply bg-blue-100 text-blue-900 p-4 rounded-lg shadow-md flex justify-center items-center cursor-pointer;
+}
+
+.upload-area:hover {
+  @apply bg-blue-200;
+}
