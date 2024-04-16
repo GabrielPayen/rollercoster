@@ -130,7 +130,7 @@ function calculateElevationSpeed(points) {
 }
 
 function calculateDistance(points) {
-  const distanceData = []
+  const distanceData = [0]
   let totalDistance = 0
 
   for (let i = 1; i < points.length; i++) {
