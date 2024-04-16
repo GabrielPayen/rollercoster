@@ -28,18 +28,18 @@ export const parseGPX = async (file) => {
         const elevationData = points.map((point,idx) => ({
           time: point.time,
           elevation: point.ele,
-          distance: distanceData[idx]
+          distance: distanceData[idx].distance
         }))
 
      
       const elevationSpeedData = movingAverage(calculateElevationSpeed(points), "elevationSpeed", 30)
-        .map((data, idx) => ({ ...data, distance: distanceData[idx] }));
+        .map((data, idx) => ({ ...data, distance: distanceData[idx].distance }));
       
       const speedData = movingAverage(calculateSpeed(points), "speed", 30)
-        .map((data, idx) => ({ ...data, distance: distanceData[idx] }));
+        .map((data, idx) => ({ ...data, distance: distanceData[idx].distance }));
       
       const paceData = movingAverage(calculatePace(points), "pace", 30)
-        .map((data, idx) => ({ ...data, distance: distanceData[idx] }));
+        .map((data, idx) => ({ ...data, distance: distanceData[idx].distance }));
       
         const averageSpeed = distance / (duration / 60)
 
